@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ProductList from './components/ProductList';
 import './App.css';
+import logo from './assets/logo.jpeg'; // Import the logo image
 
 function App() {
   const [products] = useState([
@@ -11,8 +12,12 @@ function App() {
 
   return (
     <div className="app">
-      <h1>AJ Mill Collectibles</h1>
+      <img src={logo} alt="AJ Mill Collectibles Logo" className="logo" />
+      <h1 className="title">AJ Mill Collectibles</h1>
       <ProductList products={products} />
     </div>
   );
 }
+
+export default App;
+
